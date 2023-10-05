@@ -1,35 +1,18 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import ImageSlider from './ImageSlider';
+import car1 from './images/car-1.jpg';
+import car2 from './images/car-2.jpg';
+import car3 from './images/car-3.jpg';
+import car4 from './images/car-4.jpg';
+import car5 from './images/car-5.jpg';
+
+const IMAGES = [car1, car2, car3, car4, car5];
 
 function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+	return (
+		<div style={{ maxWidth: '1200px', width: '100%', aspectRatio: '10 / 6', margin: '0 auto' }}>
+			<ImageSlider imageUrls={IMAGES} />
+		</div>
+	);
 }
 
-export default App
+export default App;
